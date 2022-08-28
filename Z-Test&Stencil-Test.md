@@ -32,10 +32,10 @@
 ## 2.什么是模板测试
 ### 2.1 从渲染管线理解
 * 下图为从片元着色器到FrameBuffer的流程（逐片元操作）
-![1661621587660](https://user-images.githubusercontent.com/74708198/187041495-db4d3722-41ce-40e7-9990-000c22a0e9c0.jpg)
+<br>![1661621587660](https://user-images.githubusercontent.com/74708198/187041495-db4d3722-41ce-40e7-9990-000c22a0e9c0.jpg)
 
 * 逐片元操作流程：
-![1661621612911](https://user-images.githubusercontent.com/74708198/187041508-b4311103-e705-4fd5-a04f-508a2aeff8b3.jpg)
+<br>![1661621612911](https://user-images.githubusercontent.com/74708198/187041508-b4311103-e705-4fd5-a04f-508a2aeff8b3.jpg)
 
 * 可以看到逐片元的流程依次为
   * 像素所有权测试→裁剪测试→透明度测试→模板测试→深度测试→透明度混合
@@ -108,17 +108,17 @@ stencil{
 
 ### 3.2 ComparisonFunction
 * 我们可以根据需求配置
-![1661697170841](https://user-images.githubusercontent.com/74708198/187079376-1ab833c1-6df0-4daa-a48a-fa5af23a309d.png)
+<br>![1661697170841](https://user-images.githubusercontent.com/74708198/187079376-1ab833c1-6df0-4daa-a48a-fa5af23a309d.png)
 
 ### 3.3 StencilOperation 更新值
 * 有不同的更新操作，根据自己的需求进行配置
-![1661697248449](https://user-images.githubusercontent.com/74708198/187079425-b7e6d487-5371-4771-88b9-54641fcfd0a8.png)
+<br>![1661697248449](https://user-images.githubusercontent.com/74708198/187079425-b7e6d487-5371-4771-88b9-54641fcfd0a8.png)
 
 ## 4. Demo效果展示和讲解
 ### 4.1 案例一：3D卡牌效果
 * **注：**Unity中模板缓冲区默认都是0
 * 在材质中将ReferenceValue改为0时的效果（模型直接摆放的效果）
-![image](https://user-images.githubusercontent.com/74708198/187079677-c77ad2c2-47fb-4237-af57-01f12c424cba.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/187079677-c77ad2c2-47fb-4237-af57-01f12c424cba.png)
 
 #### 4.1.1 蒙版的shader
 ```HLSL
@@ -257,7 +257,7 @@ ENDCG
   * 回顾前边，我们mask的缓冲区的值也为1，通过了测试，所以mask部分（卡牌部分）渲染了出来。
 
 ### 4.2 案例二：盒子不同面显示不同场景
-![1661700116537](https://user-images.githubusercontent.com/74708198/187081591-621298ff-b1b1-4622-b170-3bb565a0f8a0.png)
+<br>![1661700116537](https://user-images.githubusercontent.com/74708198/187081591-621298ff-b1b1-4622-b170-3bb565a0f8a0.png)
 **实现思路**
 * 和卡牌效果类似，一个用蒙版遮罩的物体，盒子每个面使用一个蒙版遮罩
 * 同样利用默认的值为0来做，只是面多了，蒙版和里边显示的物体也多了，ID依次为1、2、3、4
@@ -303,22 +303,22 @@ ENDCG
 ## 6.扩展及参考资料
 ### 6.1 扩展用法
 * 描边操作
-![image](https://user-images.githubusercontent.com/74708198/187082002-c0c44fb9-8b1d-422a-a018-2fba628e79cc.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/187082002-c0c44fb9-8b1d-422a-a018-2fba628e79cc.png)
 * 多边形填充
-![image](https://user-images.githubusercontent.com/74708198/187082007-94fd2630-7065-4b5c-bdc8-06551ffc39f9.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/187082007-94fd2630-7065-4b5c-bdc8-06551ffc39f9.png)
 * 反射区域控制
-![image](https://user-images.githubusercontent.com/74708198/187082016-9c5a1e8d-3909-4392-8fd0-9e3dff51021f.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/187082016-9c5a1e8d-3909-4392-8fd0-9e3dff51021f.png)
 * shadow volume阴影渲染
-![image](https://user-images.githubusercontent.com/74708198/187082022-910a8aa0-9709-4bd1-b2f7-c0bb504850a2.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/187082022-910a8aa0-9709-4bd1-b2f7-c0bb504850a2.png)
 
 ### 6.2 参考资料
-● 官方文档：https://docs.unity3d.com/Manual/SL-Stencil.html
-● https://blog.csdn.net/u011047171/article/details/46928463
-● https://blog.csdn.net/liu_if_else/article/details/86316361
-● https://gameinstitute.qq.com/community/detail/127404
-● https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/02%20Stencil%20testing/
-● https://www.patreon.com/posts/14832618
-● https://www.udemy.com/course/unity-shaders/
+* 官方文档：https://docs.unity3d.com/Manual/SL-Stencil.html
+* https://blog.csdn.net/u011047171/article/details/46928463
+* https://blog.csdn.net/liu_if_else/article/details/86316361
+* https://gameinstitute.qq.com/community/detail/127404
+* https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/02%20Stencil%20testing/
+* https://www.patreon.com/posts/14832618
+* https://www.udemy.com/course/unity-shaders/
 
 ## 深度测试部分
 ## 1. 什么是深度测试
@@ -502,7 +502,7 @@ if (correntDepthValue ComparisonFunction DepthBufferValue){
 * 结果就是重叠部分为绿色，而未重叠部分的深度当然小于无穷大，所以没通过测试，自然也就不渲染。
 * 红色部分正常。
 
-<br> **shader截图**
+<br> **shader code**
 //重点看深度部分即可（图1），后边就是一个颜色而已
 ```HLSL
 Shader "ZTest/ZTest"{
@@ -539,21 +539,21 @@ Shader "ZTest/ZTest"{
         };
         
         sampler2D _MainTex;
-        float4 _MainTex ST;
+        float4 _MainTex_ST;
         float4 _MainColor;
         
         v2f vert (appdata v)
         {
             v2f o;
             o.vertex = UnityObjectToClipPos(v.vertex);
-            o.uv = TRANSFORM_TEX(V.UV, MainTex);
-            UNITY TRANSFER FOG(o,o. vertex);
+            o.uv = TRANSFORM_TEX(v.uv,_MainTex);
+            UNITY TRANSFER_FOG(o,o.vertex);
             return o;
         }
 
         fixed4 frag (v2f i) : SV_Target
         {
-            half4 col =_MainColor:
+            half4 col =_MainColor;
             // apply fog
             UNITY_APPLY_FOG(i.fogCoord, col);
             return col:
@@ -562,3 +562,169 @@ Shader "ZTest/ZTest"{
    }
 }
 ```
+### 5.2 案例二：X-Ray效果
+![image](https://user-images.githubusercontent.com/74708198/187090105-9eb985b6-cee7-48de-afb6-b451e572919b.png)
+
+* 实现思路：
+  * 分为三部分：前边的墙、被墙挡住的X-Ray效果部分、高出墙部分的物体
+  * 回想一下前边6张图，哪张图是前边渲染完，后边渲染显示在先渲染完前边的？  --->图6
+  * 也就是说，X-Ray效果部分我们使用到了ZTest ：Greater，深度写入关闭
+  * 高出墙体部分是默认的渲染：LessEqual、ZWrite On
+
+## shader code ##
+```HLSL
+Shader "ZTest/XRay"
+
+{
+    Properties
+    {
+        _MainTex("Base 2D", 2D) = "white" {}
+        _XRayColor ("XRay Color", Color) = (1,1,1,1)
+    }
+    SubShader
+    {
+        CGINCLUDE // 使用CGINCLUDE写好vertex、fragment 着色器，逐Pass使用
+        #include "UnityCG.cginc"
+        fixed4 _XRayColor;
+        
+        struct v2f
+        {
+        float4 pos : SV_POSITION;
+        float3 normal : NORMAL;
+        float3 viewDir : TEXCOORDO;
+        fixed4 clr : COLOR;
+        };
+        
+        v2f vertrXray(appdate_base v)
+        {
+            v2f o;
+            o.pos = UnityObjectToCilpPos(v.vertex);
+            o.viewDir = ObjSpaceViewDir(v.vertex); //
+            o.normal = v.normal;
+            
+            floate3 normal = normalize(v.normal);
+            floate3 viewDir = normalize(v.viewDir);
+            float rim = 1 - dot(normal, viewDir);
+            
+            o.clr = _XRayColor * rim;
+            return o;
+         }
+         
+         fixed4 fragray(v2f i) : SV_TARGET
+         {
+             return i.clr;
+         }
+         
+         sampler2D _MainTex;
+         float4 _MainTex_ST;
+         
+         struct v2f2
+         {
+         float4 pos : SV_POSITION;
+         float2 uv  : TEXCOORDO;
+         };
+        
+         v2f2 vertNormal (appdata_base v)
+         {
+              v2f2 o;
+              o.pos = Unity0bjectToClipPos (v.vertex); 
+              o. uv = TRANSFORM TEX(v.texcoord, _MainTex);
+              return o;
+              }
+
+              fixed4 fragNormal (v2f2 i) : SV_TARGET
+              {
+              return tex2D(_MainTex, i.uv);
+         }
+         ENDCG
+
+         Pass // xRay 绘制
+         {
+              Tags{ "RenderType" = "Transparent" "Queue" = "Transparent"}
+              Blend SrcAlpha One
+              Zest Greater ///核心
+              write Off
+              Cull Back
+
+              CGPROGRAM
+              #pragma vertex vertXray
+              #pragma fragment fragXray
+              ENOCG
+          }
+
+          Pass // 正常绘制
+          {
+          Tags{ "RenderType" = "Opaque" }
+          Zest LEqual
+          ZWrite On
+
+          CGPROGRAM
+          #pragma vertex vertNormal
+          #pragma fragment fragNormal
+          ENDCG
+          }
+     }
+}
+```
+* 代码理解
+  * 写CGINCLUDE的好处：将顶点和片元着色器写在里边，在多passshade的时候，直接调用就可以了。（跟C++头文件类似）
+  * X-Ray绘制部分
+    * 和之前实现思路相同，ZWrite Off，ZTest Greater
+    * Cull back 是剔除背面，为了优化
+    * Blend     SrcAlpha One ：由于有一个透明的效果，除了上边的，还需要一步Blend，来做透明度混合
+    * 渲染类型和渲染队列为Transparent
+  * 正常绘制部分略
+
+### 5.2 粒子系统中的深度测试
+* 创建一个粒子系统ParticleSystem，可以看到默认的是透明的
+<br>![image](https://user-images.githubusercontent.com/74708198/187090209-95180c61-3412-442e-a721-c16b3b934e94.png)
+* 为了加深理解，我们自己来复刻一下这个粒子系统的效果
+  * 我们自己创建一个材质，给到粒子上
+  * 此时粒子系统变成了这样
+<br> ![image](https://user-images.githubusercontent.com/74708198/187090229-6d8c0675-745c-424b-9546-a843fab54b74.png)
+* 创建一个shader（Unlit），把粒子的贴图选上，附到材质上，效果如下（是不透明的），这显然不是我们要的效果
+<br>![image](https://user-images.githubusercontent.com/74708198/187090236-d783c1a0-e256-4215-ab8e-12b29f146537.png)
+* 打开shader修改代码
+  * 首先回顾前边说的：Unity中默认的ZWrite On、ZTest是LessEqual、渲染队列是Geometry
+  * 我们想要让粒子透明，就需要做如下配置
+    * 渲染队列改为透明物体的渲染队列：Transparent
+    * ZWrite Off，对于透明物体，是有相互叠加关系的，所以关掉写入
+    * ZTest 默认（LessEqual），对于透明物体是这样的：如果透明物体前有不透明物体，此时 透明物体看不到；如果透明物体后面有不透明物体，此时透明物体可以看到。
+    * 要渲染透明物体，还要进行Blend操作：Blend One One（加法混合，叠加效果的显示）
+  * 修改完成后效果如下：（正是我们想要的效果）
+<br>![image](https://user-images.githubusercontent.com/74708198/187090257-1834ded1-faf8-4479-baaf-1bd6e9ae5cf2.png)
+
+## 6. 深度测试的总结
+* 最重要的两个值：当前深度缓冲区的值（ZBufferValue） 和 深度参考值（ReferenceValue）。通过比较操作还实现理想的渲染效果
+* **Unity中的渲染顺序：**
+  * 先渲染不透明物体（从前到后），再渲染透明物体（从后往前）
+* **Unity中的默认条件：**
+  * ZWrite：On
+  * Ztest：LessEqual
+  * 渲染队列：Geometry（2000）
+* 通过对ZWrite和ZTest的相互组合配置来控制半透明物体的渲染（关闭深度写入，快开启深度测试，透明度混合）
+* 引入Early-Z之后深度测试相关的内容（Z-Cull、Z-Check）
+* 深度缓冲区中存储的深度值为[0，1]的非线性值
+
+## 7. 扩展及参考资料
+### 7.1 深度测试的扩展用法
+* 基于深度的着色
+  * 如：湖水的效果
+  * ![image](https://user-images.githubusercontent.com/74708198/187091238-4fec0a0c-2fe9-4cba-937e-2f16cc09a676.png)
+
+* 阴影贴图（shadowmap）
+  * 比较摄像机空间和灯光空间的深度值得到阴影范围
+* 透明物体、粒子渲染
+* 透视X-Ray效果
+* 切边效果
+### 7.2 参考资料
+* https://blog.csdn.net/puppet_master/article/details/53900568
+* https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/01%20Depth%20testing/
+* https://docs.unity3d.com/cn/2018.4/Manual/SL-CullAndDepth.html
+* https://blog.csdn.net/yangxuan0261/article/details/79725466
+* https://roystan.net/articles/toon-water.html
+* 《shader入门精要》
+* 《Unity ShaderLab 开发实战详解》
+
+
+
