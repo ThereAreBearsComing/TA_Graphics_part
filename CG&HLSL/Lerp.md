@@ -4,6 +4,7 @@
 它的函数签名和定义:
 <br>![image](https://user-images.githubusercontent.com/74708198/192804056-4572a5e3-b94a-4a55-9c59-bc350771a055.png)
 <br>从定义来看还是挺简单的，我们主要是理解它有什么作用。另外我们规定，weight是一个在区间[0,1]的实数，倒不是因为取更大的值之后，这个函数就无定义了，而是因为取更大的值，这个函数就失去了我们构造它的理由，另外，CG会限制weight的值在0-1的范围内，超过这个范围会被留在边界0或者边界1
+<br>![Lerp1](https://user-images.githubusercontent.com/74708198/199573023-887e52b0-5f7d-4b99-92a7-09b04acee959.gif)
 
 <br>这里的y<sub>1</sub>被称为起点，而y<sub>2</sub>被称为终点，`lerp函数就是取值y1到y2中间的一个值`。取多少呢？**就由weight来控制**，eg.当weight为0.5时，它正好落在起点和终点的中间。为了更加方便理解，我们可以把这个公式换成这种格式:
 <br>![image](https://user-images.githubusercontent.com/74708198/192806113-80febc07-7f37-4e27-b1d6-ad1fc958fa8b.png)
@@ -80,3 +81,23 @@ Shader "Assets/MyLab/Shaders/Lerp_tester"{
 ```
 <br>它的最终效果如下，我们选择两种比较深的颜色来看一下。
 <br>![Lerp](https://user-images.githubusercontent.com/74708198/192814682-7f1b7936-449e-4c74-9a88-0ba7941ba1b0.gif)
+
+## 插值逆运算 InverseLerp(float a, float b, float value):
+计算在范围[a,b]内生成插值value的线性参数t。
+* 公式：value/（b - a）
+* 应用案例
+<br>!![GIF 2022-11-3 2-47-45](https://user-images.githubusercontent.com/74708198/199576141-c5396a85-8d19-460d-a5a2-ca5ec7b9a5d1.gif)
+
+
+## 贝塞尔曲线
+起点p0 终点p2 控制点p1
+```
+P01 = Lerp(P0,P1,t)
+P12 = Lerp(P1,P2,t)
+P = Lerp(P01,P12,t)
+```
+公式：
+    $$（1-t）^ 2 P_0 + 2t(1-t)P_1 + t^2P_2 $$
+<br>![cxz](https://user-images.githubusercontent.com/74708198/199576354-54c40331-c86c-4e24-89e5-53a33e3910e8.gif)
+
+
