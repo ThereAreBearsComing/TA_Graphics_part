@@ -40,3 +40,46 @@ TA基础
 * Ways to create content for custom solutions (special materials, volumetric effects)
 * Speeding up workflow
 
+<br>在项目刚开始时，技术美术作用非常大，当然这也取决于团队的工作方式。有时小团队更倾向于采用新的技术，技术美术可以帮忙测试新的软件，找到质量高的工具，就算不确定在这个游戏项目中适不适合，至少也测试了艺术风格。比如要采用那种新的着色器或者新的光照方案，怎么样更好的导出网格，来达到某种艺术风格。
+<br>接着需要创建一个样例资产，因为手里有准备好的资产，别人就可以随时打开与你讨论，“嗯不错，就要这种效果，可以在游戏中展示”。这里直接跟你的工作流有关，因为你是一个懂艺术的人，也许也会应该去决定怎样的工作流更加合适。比如有的引擎的流程非常复杂，也许我们就需要一些现成的工具去简化它，比如自动生成法线。
+<br>新的游戏项目往往是简化流程的契机，去取其精华去其糟粕，从而找到新的解决方案。这里去做些改进啊，那里去开发个新的工具什么的，完善下管线或者工作流程等等。
+
+## Optimization debugging
+![image](https://user-images.githubusercontent.com/74708198/200911246-4b82230c-e8c3-41b8-ab03-e14f9635a9f0.png)
+<br> Work with QA:quality assurance.
+* Profiliing levels
+* Finding ways to increase graphics performance
+* Communicating it to artist
+* Finding solutions when content exceeds budget
+
+<br>在此阶段你需要和QA部分进行大量交流，因为测试人员会反馈很多bug，而你则需要去分析它们，你知道艺术家们哪里做错了，同时也了解引擎出了哪些毛病。比如一些常见的问题，如Unity中的Z-fighting，你会知道或许是用错了法线，或者用错了光照，也许一个地方打光过多，一个像素受到了四个光源的光照，结果就消失了，这些问题你会非常熟悉，因为你同时了解艺术和技术的内容，或者知道尝试去理解它们。当然你解决的问题越多，和艺术家，程序员交流的也就越多，你也将学到越多。所以想要进步，就应该不断去调试，改进。当你自己解决问题之后，和艺术家们交流，尝试将有效经验整理为技术文档，列出这些常见的bug以及如何规避它们。
+<br>至于优化方面，你要么要向艺术家提供出更好的解决方案，让他们的作品更好地去适应程序。要么用profiler（性能分析机）进行分析，这些常见的图形调试软件，不仅可以测量性能，还可以从游戏中抓帧，看看加载了什么贴图什么网格，非常有用。
+
+## Education
+![image](https://user-images.githubusercontent.com/74708198/200909640-f66fe1c6-5287-4321-86dc-7753136b22ab.png)
+<br>Work with learning and development specialists.
+* Talking with engineers, then passing the know-ledge to artisits.
+* Teaching new tools
+* Documenting in-house tools
+* Helpin with engine-specific problems
+* Showing best practices and what to avoid
+
+<br>TA实际工作中需要经常跟程序打交道，然后回头去教艺术家，就算这不是你的活，也很值得去做，因为你要去实操美术工具，所以可以用艺术家熟悉的语言去解释问题。当然有个艰巨的人物，一般没人想碰，那就是写技术文档。使用引擎，熟悉流程，然后文辞流畅地书写下来，这是个不简单的活儿，因为你没法一步到位，工具是不断迭代的，文档的也将不断更新。所以这也会是连接艺术家和程序员间的桥梁之一。
+
+## Connecting artists with programmers
+![image](https://user-images.githubusercontent.com/74708198/200928010-980b4501-0fa7-41f7-8449-b2f545c51b55.png)
+<br>Work with producers
+* Being a negotiator between two warring tribes
+
+<br>衔接美术和程序是一个苦力活儿，就像夹在“联盟”和你“部落”之间谈判的中立势力，如果你的团队中美术和程序关系紧张，你就得努力弥合因为两个阵营因互相缺乏了解而产生的各种分歧。因为艺术家警察觉得莫名奇妙，为啥程序执意要求把资源存为奇怪的格式，为啥非要用一些自研的工具，而不是选择现成的，而这就牵扯到了管线问题。
+
+## Pipline
+![image](https://user-images.githubusercontent.com/74708198/200929512-c03ccd77-9882-43d7-9a43-205e166bf954.png)
+
+<br>Work with Pipline tool programmers
+* Batch tools (mass texture export, collision setup)
+* Automation (LOD generation, mesh clean-up)
+* Vaildation (polycount, texture count PBR correctness)
+* Export between tools
+
+<br>
