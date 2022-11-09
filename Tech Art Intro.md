@@ -8,7 +8,7 @@ TA基础
 ## Shaders
 ![image](https://user-images.githubusercontent.com/74708198/200617570-ed9175d4-04b7-4d56-9f53-a54c70fcc80a.png)
 
-<br>Work with Texture Artists:
+<br>Work with Texture Artists.
 * Developing shaders(Code or node-based)
 * Non-standard materials,
 * Animated materials
@@ -21,7 +21,7 @@ TA基础
 ## Effects
 ![image](https://user-images.githubusercontent.com/74708198/200623194-a719b6e5-2a67-4536-b6c7-2f6ee1ceaa74.png)
 
-<br>Work with VFX: visual effects artists
+<br>Work with VFX: visual effects artists.
 * Destruction
 * Rivers
 * Surface damage
@@ -29,3 +29,14 @@ TA基础
 
 <br>特效艺术家通常业务精通，但并非了解手中的工具，比如他们在Houdini中做了烟雾的模拟，这部分是他们擅长的。但需要导入到引擎里以备使用，由于最终效果往往取决于贴图或者通过其他方式储存。假设，特效师创建了3个变量来控制表面破坏效果，然后TA就需要混合这些参数来做一个材质，还要加上其他因素，其他遮罩，这就属于另一种着色器的开发工作了，当你使用模拟的输入后，将这些在引擎中实现。
 <br>在举例一个河流模拟的例子。 流体模拟需要上百万的粒子。不过它们可以大量删减或至少部分地烘培到贴图里去，然后你可以做一个使用flowmap的Shader，直接使用去艺术家提供的材质去混合深水浅水，泡沫等，从而做出流水击石的泡沫效果。至于程序化的环境动画，有些动画可以作假，靠模拟即可。比如衣服被微风撩动的动画。
+
+## Workflow Research & Development
+![image](https://user-images.githubusercontent.com/74708198/200838128-d25016b2-4aa6-4cb4-92e9-66e6985af78b.png)
+
+<br>Work with Character artists, Enviro artists, Level artists.
+* Sample assets
+* Art style
+* Testing new software
+* Ways to create content for custom solutions (special materials, volumetric effects)
+* Speeding up workflow
+
