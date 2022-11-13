@@ -225,3 +225,85 @@ public class ForeachLoop : MonoBehaviour
     }
 }
 ```
+
+## 4.0 作用域和访问修饰符
+变量作用域指，代码中可以使用这个变量的区域。变量局限于代码之中，而代码域表示为花括号。如果其他脚本希望访问其他域中的变量则，需要public变量，否则为private。如果被public则意味着即使在class外，也可以被访问。这也意味着在Inspector中也将可以显示和编辑此变量！！！如果没指定变量为public或private，则默认为private。
+
+### ScopeAndAccessModifiers
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class ScopeAndAccessModifiers : MonoBehaviour
+{
+    public int alpha = 5;
+    
+    
+    private int beta = 0;
+    private int gamma = 5;
+    
+    
+    private AnotherClass myOtherClass;
+    
+    
+    void Start ()
+    {
+        alpha = 29; // 一但运行这个值将会覆盖Inspector的输入，但在在运行中，在次在Inspector修改的话，他就会再次覆盖脚本中的29。
+                    // 但是重要的是在退出运行模式后运行中Inspector修改的数值将被重置，且不会保存到Inspector中
+        
+        myOtherClass = new AnotherClass();
+        myOtherClass.FruitMachine(alpha, myOtherClass.apples); //只能用apples和banana，因为就这俩是public
+    }
+    
+    
+    void Example (int pens, int crayons)
+    {
+        int answer;
+        answer = pens * crayons * alpha;
+        Debug.Log(answer);
+    }
+    
+    
+    void Update ()
+    {
+        Debug.Log("Alpha is set to: " + alpha);
+    }
+}
+```
+![image](https://user-images.githubusercontent.com/74708198/201528172-4e1be304-d36c-484a-9c6b-60ac99db1deb.png)
+
+
+### AnotherClass
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class AnotherClass
+{
+    // 其它脚本可以访问
+    public int apples;
+    public int bananas;
+    
+    // 其它脚本无法访问
+    private int stapler;
+    private int sellotape; 
+    
+    
+    public void FruitMachine (int a, int b)
+    {
+        int answer;
+        answer = a + b;
+        Debug.Log("Fruit total: " + answer);
+    }
+    
+    
+    private void OfficeSort (int a, int b)
+    {
+        int answer;
+        answer = a + b;
+        Debug.Log("Office Supplies total: " + answer);
+    }
+}
+```
+
+
