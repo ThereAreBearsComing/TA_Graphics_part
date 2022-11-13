@@ -306,4 +306,33 @@ public class AnotherClass
 }
 ```
 
+## 5.0 Awake 和 Start
+Awake和Start都是在加载脚本时自动调用的两个函数，其中Awake即使脚本组件未启用也没关系，所以特别适合与初始化之间设置任何引用。 Start则在Awake之后调用，而且直接在首次更新之前调用，但前提是已经启用了脚本组件，即启用脚本组件的情况下，可以使用Start启动任何所需操作，而且是直接在首次更新之前调用，但前提必须是脚本已经启用（即在Inspector中被勾选）。即在启用脚本组件的情况下，你可以用Start启动任意所需操作。这样就可以将初始化部分的代码，延迟到真正需要的时候运行。
+<br>例如，有一个敌方角色进入游戏，并使用了Awake获得了分配的弹药，但是想要设计，需要在启动脚本组件时，使用Start在定义时间实现射击，但需要注意Start喝Awake在一个对象绑定脚本的生命周期内只能调用一次，因此不能通过禁用和重新启用脚本来重复执行Start函数。
 
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class AwakeAndStart : MonoBehaviour
+{
+    void Awake ()
+    {
+        Debug.Log("Awake called.");
+    }
+    
+    
+    void Start ()
+    {
+        Debug.Log("Start called.");
+    }
+}
+```
+给游戏内物体挂在此脚本，当在Inspector内不勾选时，运行：
+![image](https://user-images.githubusercontent.com/74708198/201535411-7e3f6cc7-261c-460b-8d2b-f1c3c895a0ca.png)
+则在Console只会看到Awake函数。
+![image](https://user-images.githubusercontent.com/74708198/201535441-75638974-078d-4158-be99-1bbe51182fbe.png)
+再回去Inspector内勾选脚本，重新运行：
+![image](https://user-images.githubusercontent.com/74708198/201535511-8238fd24-2cb9-4fae-a2ff-9a7642e5127e.png)
+则在Console会看到Awake和Start两个函数。
+![image](https://user-images.githubusercontent.com/74708198/201535519-60a54e8f-7760-4a63-b550-6787561aeda8.png)
