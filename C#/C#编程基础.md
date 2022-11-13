@@ -1,5 +1,6 @@
-# 作为行为组件的脚本
-脚本应该被视为，Unity中的行为组件
+# C#初级编程基础
+
+脚本应该被视为，Unity中的行为组件。
 ```C#
 using UnityEngine;
 using System.Collections;
@@ -114,19 +115,19 @@ public class IfStatements : MonoBehaviour
     void TemperatureTest ()
     {
         // 如果咖啡的温度高于最热的饮用温度...
-        if(coffeeTemperature > hotLimitTemperature)
+        if(coffeeTemperature > hotLimitTemperature) // 条件一
         {
             // ... 执行此操作。
             print("Coffee is too hot.");
         }
         // 如果不是，但咖啡的温度低于最冷的饮用温度...
-        else if(coffeeTemperature < coldLimitTemperature)
+        else if(coffeeTemperature < coldLimitTemperature) // 条件二
         {
             // ... 执行此操作。
             print("Coffee is too cold.");
         }
         // 如果两者都不是，则...
-        else
+        else                                                // 条件三
         {
             // ... 执行此操作。
             print("Coffee is just right.");
@@ -136,25 +137,7 @@ public class IfStatements : MonoBehaviour
 ```
 
 ## 3.0 循环
-
-### ForLoop
-```C#
-using UnityEngine;
-using System.Collections;
-
-public class BasicSyntax : MonoBehaviour
-{
-    void Start ()
-    {
-        Debug.Log(transform.position.x);
-        
-        if(transform.position.y <= 5f)
-        {
-            Debug.Log ("I'm about to hit the ground!");
-        }
-    }
-}
-```
+Loop即重复操作的方式。
 
 ### WhileLoop
 ```C#
@@ -177,7 +160,9 @@ public class WhileLoop : MonoBehaviour
 }
 ```
 
+
 ### DoWhileLoop
+与WhileLoop不同之处是，WhileLoop在循环主体之前检验条件，DoWhileLoop在结束时菜开始检验条件。这意味着DoWhileLoop将至少运行一次。
 ```C#
 using UnityEngine;
 using System.Collections;
@@ -193,6 +178,27 @@ public class DoWhileLoop : MonoBehaviour
             print ("Hello World");
             
         }while(shouldContinue == true);
+    }
+}
+```
+
+### ForLoop
+ForLoop是最常见最灵活的循环，ForLoop利用可控的数量的迭代创建循环，就功能而言他会先检查循环中的条件，
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class ForLoop : MonoBehaviour
+{
+    int numEnemies = 3;
+    
+    
+    void Start ()
+    {
+        for(int i = 0; i < numEnemies; i++) // i为变量迭代子，用于计算迭代次数。接着为条件，must be true。最后为每次循环后对迭代子的更新处理。
+        {
+            Debug.Log("Creating enemy number: " + i);
+        }
     }
 }
 ```
