@@ -270,7 +270,7 @@ public class ScopeAndAccessModifiers : MonoBehaviour
     }
 }
 ```
-![image](https://user-images.githubusercontent.com/74708198/201528172-4e1be304-d36c-484a-9c6b-60ac99db1deb.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/201528172-4e1be304-d36c-484a-9c6b-60ac99db1deb.png)
 
 
 ### AnotherClass
@@ -328,11 +328,41 @@ public class AwakeAndStart : MonoBehaviour
     }
 }
 ```
-给游戏内物体挂在此脚本，当在Inspector内不勾选时，运行：
-![image](https://user-images.githubusercontent.com/74708198/201535411-7e3f6cc7-261c-460b-8d2b-f1c3c895a0ca.png)
-则在Console只会看到Awake函数。
-![image](https://user-images.githubusercontent.com/74708198/201535441-75638974-078d-4158-be99-1bbe51182fbe.png)
-再回去Inspector内勾选脚本，重新运行：
-![image](https://user-images.githubusercontent.com/74708198/201535511-8238fd24-2cb9-4fae-a2ff-9a7642e5127e.png)
-则在Console会看到Awake和Start两个函数。
-![image](https://user-images.githubusercontent.com/74708198/201535519-60a54e8f-7760-4a63-b550-6787561aeda8.png)
+<br>给游戏内物体挂在此脚本，当在Inspector内不勾选时，运行：
+<br>![image](https://user-images.githubusercontent.com/74708198/201535411-7e3f6cc7-261c-460b-8d2b-f1c3c895a0ca.png)
+<br>则在Console只会看到Awake函数。
+<br>![image](https://user-images.githubusercontent.com/74708198/201535441-75638974-078d-4158-be99-1bbe51182fbe.png)
+<br>再回去Inspector内勾选脚本，重新运行：
+<br>![image](https://user-images.githubusercontent.com/74708198/201535511-8238fd24-2cb9-4fae-a2ff-9a7642e5127e.png)
+<br>则在Console会看到Awake和Start两个函数。
+<br>![image](https://user-images.githubusercontent.com/74708198/201535519-60a54e8f-7760-4a63-b550-6787561aeda8.png)
+
+6.0 Update 和 FixedUpdate
+Update是最常用的函数之一，在每个使用它的脚本中每帧调用一次。基本上只需要变化或调整都需要使用Update来实现。例如，非物理对象的移动，简单的计时器，输入检测等等。一般都在Update中完成。
+注意Update并不是固定时间，如果这一帧比下一帧处理时间长，那Update时间也会长。
+<br>FixedUpdate函数与Update类似，但是FixedUpdate是按固定时间调用，调用FixedUpdate后会立即进行任何必要的物理计算，因此任何影响刚体（即物理对象）的动作都应该使用FixedUpdate执行而不是Update。在FixedUpdate循环中编写的物理脚本时，最好使用力来定义移动。
+
+```C#
+using UnityEngine;
+using System.Collections;
+
+public class UpdateAndFixedUpdate : MonoBehaviour
+{
+    void FixedUpdate ()
+    {
+        //Called every physics step
+        // FixedUpdate intervals are consistent
+        // Used forvregular updates such as:
+        // Adjusting physics (Ridgidbody) objects
+        Debug.Log("FixedUpdate time :" + Time.deltaTime);
+    }
+    
+    
+    void Update ()
+    {
+        Debug.Log("Update time :" + Time.deltaTime);
+    }
+}
+```
+<br>当执行此脚本后，所有的FixUpdate都一样0.02，并且可以折叠为一个，而Update明显不一样且不能折叠为一个。
+<br>![image](https://user-images.githubusercontent.com/74708198/201538518-ff3a3851-047c-424e-b488-731a5cca6781.png)
