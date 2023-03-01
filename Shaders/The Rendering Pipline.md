@@ -26,3 +26,23 @@
 * **光栅化阶段(Rasterization Stage)会把图形映射为最终屏幕上相应的像素，生成片段(Fragment)，并执行裁剪(Clipping)，丢失超出你试图以外的所有像素从而提升效率
 * **片元着色器(Fragment Shader)** 计算每个像素的最终颜色
 * **Alpha测试和混合(Blending)** 阶段检测片元的对应深度(和模板(Stencil))值，决定是否丢弃；这个阶段也会检测alpha值并对物体进行混合(Blend)
+
+## Untiy中的渲染管线
+<br>![image](https://user-images.githubusercontent.com/74708198/222195038-0b38dbe8-522d-4725-8c7c-051400282bb4.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/222195294-37a33db6-ed83-499c-936f-4103c129fd88.png)
+<br>![image](https://user-images.githubusercontent.com/74708198/222195348-3260aa47-b3e3-4a8f-b979-4c682d02d9ad.png)
+开发者需要考虑流程：
+
+### Untiy提供的渲染管线
+* 内置渲染管线(Built-in)
+  * Untiy的默认渲染管线
+  * 这是通用渲染管线，其自定义选项有限
+  * 2018版本之前只有内置这种管线，只有前向渲染路径(Forward Rendering)和延迟渲染路径(Defered Rendering)。
+* 通用渲染管线(URP)
+  * 一种可快速轻松自定义的可编程渲染管线
+  * 允许在各种平台上创建优化的图形
+* 高清渲染管线(HDRP)
+  * 一种可编程渲染管线
+  * 可在高端平台上创建出色的高保真图形
+* 可编程渲染管线(SRP)
+  * 可以通过Untiy的可编程渲染管线API来创建自己的自定义渲染管线
