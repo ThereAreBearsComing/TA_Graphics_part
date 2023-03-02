@@ -71,3 +71,77 @@
   * 片段着色器(颜色计算，根据法线等等计算光照)/像素着色器
   * 测试和混合阶段(不可编程，可配置)
 <br>![image](https://user-images.githubusercontent.com/74708198/222384909-00ec59cc-4158-4077-8693-c9c6d5ab3951.png)
+
+## TEST-Draw a triangle in Untiy
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class TriangleDrawer : MonoBehaviour
+{
+    public float scale = 100f;
+    public Vector3 offset;
+    public Material mat;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnPostRender()
+    {
+        DrawTriangle();
+    }
+
+    void DrawTriangle()
+    {
+        Vector3[] vertices = new Vector3[3]
+        {
+            new Vector3(0.5f,-0.5f,0),
+            new Vector3(-0.5f,-0.5f,0),
+            new Vector3(0,0.5f,0)
+        };
+
+        Vector3 v0 = vertices[0]*scale+offset;
+        Vector3 v1 = vertices[1]*scale+offset;
+        Vector3 v2 = vertices[2]*scale+offset;
+        //调用OpenGL
+        GL.PushMatrix();
+        mat.SetPass(0);
+        GL.LoadOrtho();
+
+        //GL.Begin(GL.TRIANGLES);
+        //GL.Vertex3(v0.x/Screen.width, v0.y/Screen.height, 0);
+        //GL.Vertex3(v1.x/Screen.width, v1.y/Screen.height, 0);
+        //GL.Vertex3(v2.x/Screen.width, v2.y/Screen.height, 0);
+
+        GL.Begin(GL.LINES);
+        //V0-V1
+        GL.Vertex3(v0.x/Screen.width, v0.y/Screen.height, 0);
+        GL.Vertex3(v1.x/Screen.width, v1.y/Screen.height, 0);
+        //V1-V2
+        GL.Vertex3(v1.x/Screen.width, v1.y/Screen.height, 0);
+        GL.Vertex3(v2.x/Screen.width, v2.y/Screen.height, 0);
+        //V2-V0
+        GL.Vertex3(v2.x/Screen.width, v2.y/Screen.height, 0);
+        GL.Vertex3(v0.x/Screen.width, v0.y/Screen.height, 0);
+
+        GL.End();
+        GL.PopMatrix();
+
+    }
+}
+```
+
+### Shape
+<br>![image](https://user-images.githubusercontent.com/74708198/222396108-767eb35e-80e0-4c03-ae13-faa654326a4e.png)
+### Line
+<br>![image](https://user-images.githubusercontent.com/74708198/222396369-3861173a-cc5c-43ce-9b20-787335ccd703.png)
