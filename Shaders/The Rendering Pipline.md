@@ -140,6 +140,7 @@ public class TriangleDrawer : MonoBehaviour
     }
 }
 ```
+Tips：C#中0.0为Double数据类型，而0为float所以不可以像HLSL中那样统一使用0.0代替0
 
 ### Shape
 <br>![image](https://user-images.githubusercontent.com/74708198/222396108-767eb35e-80e0-4c03-ae13-faa654326a4e.png)
