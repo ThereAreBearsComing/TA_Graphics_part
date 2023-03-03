@@ -17,7 +17,7 @@ Untiy自己封装的Shader，直接用就行。
 非传统意义上的shader，而是shaderLab的一个文件，一个UnityShader中做的远多于传统意义上的shader，一个文件可以即包含顶点着色器又包含片元着色器，也设置渲染设置，例如开启混合剔除等等。
 <br>![image](https://user-images.githubusercontent.com/74708198/222406320-5f7bfe18-3e64-4b07-8f29-c6c3791378cb.png)
 
-```CG
+```HLSL
 Shader "Custom/Surface Shader"
 {
     Properties
@@ -60,3 +60,4 @@ Shader "Custom/Surface Shader"
     FallBack "Diffuse"
 }
 ```
+![image](https://user-images.githubusercontent.com/74708198/222760237-b2eb133f-fc16-4eed-885a-38060b9c5e03.png)
