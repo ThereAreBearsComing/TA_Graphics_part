@@ -29,7 +29,7 @@
   * Gouraud shading
   * Flat shading
   * Phong
-  * [线性插值](Pages/)
+  * [线性插值](Pages/1.0.1Lerp.md)
 
 * [切线空间](Pages/0.6法线贴图和切线空间.md)
   * `TBN矩阵构建`
