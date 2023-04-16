@@ -70,7 +70,7 @@
 
 * [Alpha](Pages/)
   * Alpha Test
-  * Alpha Blend(Pages/2.2Blending.md)
+  * [Alpha Blend](Pages/2.2Blending.md)
 
 * [渲染顺序](Pages/0.9缓冲和队列.md)
   * `透明物体渲染顺序`
@@ -78,7 +78,8 @@
   * `混合图层`
   
 * [`Stencil Buffer`](Pages/2.3StencilBuffer.md)
-* [Culling and Z test](Pages/2.4Culling&Z)
+
+* [剔除与深度测试](Pages/2.4Culling&Z)
 
 * [渲染路径和光源](Pages/2.5RenderingPass&LightSource.md)
   * `前向渲染路径`
@@ -86,11 +87,13 @@
   * `延迟渲染路径`
   * *拓展课程：可编程的渲染管线*
 
-* [阴影](Pages/)
+* [阴影](Pages/2.6Shadow.md)
   * `平行光`
   * `点光源`
   * `聚光灯`
   * `PCSS, PCF，软阴影的优化方式`
+
+* [屏幕后处理](Pages/2.7PostProcessing.md)
 
 ## 渲染方案
 * [装液体的容器](Pages/)
