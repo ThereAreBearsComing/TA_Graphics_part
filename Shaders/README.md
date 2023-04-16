@@ -70,16 +70,17 @@
 
 * [Alpha](Pages/)
   * Alpha Test
-  * Alpha Blend
+  * Alpha Blend(Pages/2.2Blending.md)
 
 * [渲染顺序](Pages/0.9缓冲和队列.md)
   * `透明物体渲染顺序`
   * `渲染引擎排序的常用方法`
   * `混合图层`
   
-* [`Stencil Buffer`](Pages/)
+* [`Stencil Buffer`](Pages/2.3StencilBuffer.md)
+* [Culling and Z test](Pages/2.4Culling&Z)
 
-* [渲染路径和光源](Pages/)
+* [渲染路径和光源](Pages/2.5RenderingPass&LightSource.md)
   * `前向渲染路径`
   * 顶点照明渲染路径
   * `延迟渲染路径`
