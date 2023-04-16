@@ -51,12 +51,12 @@
   * 能量守恒
   * 金属度
 
-* [`Unity PBR`](Pages/1.7.1&1.8UnityPBR+CustomPBR.md)
+* [`Unity PBR`](Pages/1.7.1UnityPBR.md)
   * 金属度工作流
   * 高光工作流
   * [线性空间 / Gamma空间](Pages/1.7.0GammaSpace&LinearSpace.md)
 
-* [`自己实现一个PBR Shader`](Pages/1.7.1&1.8UnityPBR+CustomPBR.md)
+* [`自己实现一个PBR Shader`](Pages/1.8CustomPBR.md)
   * 直接光漫反射
   * 直接光镜面反射
   * 间接光漫反射
