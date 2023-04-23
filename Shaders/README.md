@@ -121,6 +121,9 @@
 
 * 体积光
 
+* [原神NPR复刻](Pages/原神NPR.md), step by step.
+
+
 
 ## Shader学习方法总结
 * 如何理解Shader
