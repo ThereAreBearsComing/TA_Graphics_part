@@ -9,9 +9,10 @@
   * Surface Shader
   * Vertex / Pixel Shader
   * [数据类型和关键词](Pages/0.2Shader中的基础数据类型和关键词.md)
+  * [逻辑条件判断，及优化方法](Pages/1.5LogicalStatements.md)
   * *拓展课程：Geometry Shader / Compute Shader*
 
-* [数学基础](Pages/1.0Shader数学基础(常用函数).md)
+* [数学基础，和常用shader运算符](Pages/1.0Shader数学基础(常用函数).md)
   * `坐标系`
   * 点，矢量，标量
   * `矩阵以及变换`
