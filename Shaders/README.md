@@ -18,6 +18,16 @@
   * `矩阵以及变换`
   * `坐标空间转化`
   * `法线变化`
+  * MVP矩阵
+ 
+* 模型与材质基础
+ * 纹理介绍
+
+* 显示效果基础
+ * 色彩空间介绍
+ * [线性空间 / Gamma空间](Pages/1.7.0GammaSpace&LinearSpace.md)
+ * LDR和HDR
+
 
 ## 初级知识
 * 多边形着色，标准光照模型
@@ -55,7 +65,6 @@
 * [`Unity PBR`](Pages/1.7.1UnityPBR.md)
   * 金属度工作流
   * 高光工作流
-  * [线性空间 / Gamma空间](Pages/1.7.0GammaSpace&LinearSpace.md)
 
 * [`自己实现一个PBR Shader`](Pages/1.8CustomPBR.md)
   * 直接光漫反射
