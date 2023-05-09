@@ -6,7 +6,7 @@
   * *拓展课程：可编程的渲染管线*
   * [PC手机图形API介绍](Pages/0.01PC手机图形API介绍.md)
   * [进阶：GPU硬件架构](Pages/)
-  * [进阶优化：Early-Z 、Z Prepass（Pre-Z）](Pages/)
+  * [进阶（优化）：Early-Z 、Z Prepass（Pre-Z）](Pages/)
 
 * [数学基础](Pages/1.0Shader数学基础(常用函数).md)
   * `坐标系`
@@ -19,7 +19,7 @@
 * [模型与材质基础](Pages/0.31模型与材质基础.md)
   * [纹理介绍](Pages/0.32纹理介绍.md)
   * [Bump Map 凹凸映射](Pages/0.33BumpMap凹凸映射.md)
-  * [进阶优化：纹理压缩](Pages/)
+  * [进阶（优化）：纹理压缩](Pages/)
 
 * 显示效果基础
   * 色彩空间介绍
