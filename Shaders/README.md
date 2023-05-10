@@ -20,6 +20,7 @@
 * [模型与材质基础](Pages/0.31模型与材质基础.md)
   * [纹理介绍](Pages/0.32纹理介绍.md)
   * [Bump Map 凹凸映射](Pages/0.33BumpMap凹凸映射.md)
+  * [进阶：Flowmap](Pages/0.331Flowmap.md)
   * [进阶（优化）：纹理压缩](Pages/0.34纹理压缩.md)
 
 * 显示效果基础
