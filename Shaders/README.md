@@ -1,5 +1,5 @@
 # Shader
-## 基础知识
+## 通用基础
 * [渲染管线](Pages/0.0TheRenderingPipline.md)
   * CPU / GPU之间的通信
   * `GPU流水线`
@@ -32,6 +32,7 @@
    * Vertex / Pixel Shader
    * [数据类型和关键词](Pages/0.2Shader中的基础数据类型和关键词.md)
    * [常用函数](Pages/1.00常用函数.md)
+   * Unity常用内置函数
    * [逻辑条件判断，及优化方法](Pages/1.5LogicalStatements.md)
    * *拓展课程：Geometry Shader / Compute Shader*
 
