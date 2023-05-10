@@ -32,7 +32,7 @@
    * Vertex / Pixel Shader
    * [数据类型和关键词](Pages/0.2Shader中的基础数据类型和关键词.md)
    * [常用函数](Pages/1.00常用函数.md)
-   * Unity常用内置函数
+   * [Unity常用内置变量和函数](Pages/1.1Built-in常用内置函数.md)
    * [逻辑条件判断，及优化方法](Pages/1.5LogicalStatements.md)
    * *拓展课程：Geometry Shader / Compute Shader*
 
