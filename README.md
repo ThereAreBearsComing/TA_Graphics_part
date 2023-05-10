@@ -53,7 +53,7 @@ TA职位介绍
 <br>新的游戏项目往往是简化流程的契机，去取其精华去其糟粕，从而找到新的解决方案。这里去做些改进啊，那里去开发个新的工具什么的，完善下管线或者工作流程等等。
 
 
-## Optimization debugging
+## [Optimization debugging](/Optimizationdebugging)
 ![image](https://user-images.githubusercontent.com/74708198/200911246-4b82230c-e8c3-41b8-ab03-e14f9635a9f0.png)
 <br> Work with QA:quality assurance.
 * Profiliing levels
