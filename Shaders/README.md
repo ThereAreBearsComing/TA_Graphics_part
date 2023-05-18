@@ -111,6 +111,7 @@
   * `聚光灯`
   * `PCSS, PCF，软阴影的优化方式`
   * 阴影渐变
+  * [SSAO 屏幕空间环境光遮蔽](Pages/2.63SSAO.md)
 
 * [屏幕后处理](Pages/2.7PostProcessing.md)
   * 亮度，对比度
