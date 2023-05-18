@@ -15,7 +15,8 @@
   * `矩阵以及变换`
   * `坐标空间转化`
   * `法线变化`
-  * MVP矩阵详解
+  * [MVP矩阵详解](Pages/1.02MVP矩阵.md)
+  * [Clip Space & NDC Space，透视除法](Pages/1.03容易混淆的ClipSpacevsNDC透视除法.md)
  
 * [模型与材质基础](Pages/0.31模型与材质基础.md)
   * [纹理介绍](Pages/0.32纹理介绍.md)
