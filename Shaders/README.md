@@ -149,6 +149,9 @@
 
 * [原神NPR复刻](Pages/原神NPR.md), step by step.
 
+* [星穹铁道场景渲染]
+ * [三月七小房间渲染]
+
 
 
 ## Shader学习方法总结
