@@ -36,7 +36,7 @@
    * [常用函数](Pages/1.00常用函数.md)
    * [Unity常用内置变量和函数](Pages/1.1Built-in常用内置函数.md)
    * [逻辑条件判断，及优化方法](Pages/1.5LogicalStatements.md)
-   * *拓展课程：[Geometry Shader](Pages/TessellationShader(TESS)&GeometryShader(GS).md) / [Compute Shader]()*
+   * *拓展课程：[Geometry Shader](Pages/TessellationShader(TESS)&GeometryShader(GS).md) / [Compute Shader](Pages/6.00ComputerShader.md)*
 
 ## 初级知识
 * 多边形着色，标准光照模型
