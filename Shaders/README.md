@@ -121,6 +121,14 @@
   * [Bloom](Pages/2.71Bloom.md)
   * 运动模糊
 
+## 进阶部分
+* [ComputerShader](Pages/6.00ComputerShader.md)
+  * 
+
+* SPR
+  * 
+
+
 ## 渲染方案
 * [装液体的容器](Pages/)
   * 考点：透明物体渲染排序
@@ -147,12 +155,11 @@
 
 * 体积光
 
-* [原神NPR复刻](Pages/原神NPR.md), step by step.
-
 * [星穹铁道场景渲染]
- * [三月七小房间渲染]
 
+* [三月七小房间渲染]
 
+* [原神场景渲染复现](Pages/原神NPR.md), step by step.
 
 ## Shader学习方法总结
 * 如何理解Shader
