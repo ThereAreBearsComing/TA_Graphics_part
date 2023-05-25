@@ -81,10 +81,10 @@
     * [AA优化](Pages/1.5AA优化.md)
     * [PostProcess后处理优化](Pages/1.6PostProcess后处理优化.md)
   * 中阶
-    * [Unity中的Culling](Pages/1.7Culling.md)
-    * Unity中的Simplization
-    * Unity中的Batching(上)
-    * Unity中的Batching(下)
+    * [Unity中的Culling](Pages/1.7渲染提前期优化.md)
+    * [Unity中的Simplization](Pages/1.7渲染提前期优化.md)
+    * [Unity中的Batching(上)](Pages/1.7渲染提前期优化.md)
+    * [Unity中的Batching(下)Batch失败原因汇总](Pages/1.7渲染提前期优化.md)
     * 场景简化总览与远景简化
     * 中景简化与LOD策略
     * 遮挡剔除与光影剔除优化
