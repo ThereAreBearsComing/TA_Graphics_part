@@ -86,7 +86,7 @@
     * [Unity中的Batching(上)](Pages/1.7渲染提前期优化.md)
     * [Unity中的Batching(下)Batch失败原因汇总](Pages/1.7渲染提前期优化.md)
     * [场景简化总览与远景简化](Pages/1.8场景简化总览与远景简化.md)
-    * 中景简化与LOD策略
+    * [中景简化与LOD策略](Pages/1.9中景简化与LOD策略.md)
     * 遮挡剔除与光影剔除优化
   * 终篇
     * 渲染流程的精简与优化
