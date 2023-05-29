@@ -123,7 +123,7 @@
 
 ## 进阶部分
 * [ComputerShader](Pages/6.00ComputerShader.md)
-  * 
+  * [兼容性](Pages/6.01ComputerShader兼容报告.md)
 
 * SPR
   * 
