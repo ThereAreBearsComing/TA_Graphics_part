@@ -6,8 +6,8 @@
   * *拓展课程：可编程的渲染管线*
   * [PC手机图形API介绍](Pages/0.01PC手机图形API介绍.md)
   * [进阶：GPU硬件架构](Pages/)
-  * [进阶（优化）：前向/延迟渲染管线介绍](Pages/0.02前向&延迟渲染管线介绍.md)
   * [进阶（优化）：Early-Z 、Z Prepass（Pre-Z）](Pages/0.03Early-Z,Pre-Z.md)
+  * [进阶（优化）：前向/延迟渲染管线介绍](Pages/0.02前向&延迟渲染管线介绍.md)
 
 * [数学基础](Pages/1.0Shader数学基础.md)
   * `坐标系`
