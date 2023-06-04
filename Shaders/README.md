@@ -122,6 +122,9 @@
   * 运动模糊
 
 ## 进阶部分
+* 基于物理的大气散射
+  * [单次大气散射](Pages/5.00单次大气散射.md)
+
 * [ComputerShader](Pages/6.00ComputerShader.md)
   * [兼容性](Pages/6.01ComputerShader兼容报告.md)
 
