@@ -122,6 +122,8 @@
   * 运动模糊
 
 ## 进阶部分
+* [Local Tonemapping方案总结](https://zhuanlan.zhihu.com/p/519457212)
+
 * 基于物理的大气散射
   * [单次大气散射](Pages/5.00单次大气散射.md)
 
