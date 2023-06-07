@@ -120,6 +120,7 @@
   * 高斯模糊
   * [Bloom](Pages/2.71Bloom.md)
   * 运动模糊
+  * [URP的后处理](Pages/2.72URP后处理.md)
 
 ## 进阶部分
 * [Local Tonemapping方案总结](https://zhuanlan.zhihu.com/p/519457212)
