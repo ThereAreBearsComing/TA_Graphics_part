@@ -12,7 +12,6 @@ Shader "zhang/URP"
     {
         Tags
         {
-
             // 只有带有UniversalPipeline的Tag的SubShader才会生效.
             // 主要作用是用于标记当前这个SubShader是属于URP管线下的.
             "RenderPipeline"="UniversalPipeline"
@@ -108,8 +107,7 @@ Shader "zhang/URP"
                 half4 mainTex = SAMPLE_TEXTURE2D(_MainTex,smp,i.uv);
                 half4 c = _Color * mainTex;
                 return c;
-            }
-            
+            }      
             ENDHLSL
         }
     }
