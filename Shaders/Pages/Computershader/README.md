@@ -224,7 +224,7 @@ public Material material;
 ```
 这个Material我们使用一个Unlit Shader，并且纹理不用设置，如下：
 <br>![image](https://github.com/ThereAreBearsComing/aBookOFtechArt/assets/74708198/191b2db4-0602-43c1-ab3d-9fb77609e698)
-然后关联到我们的脚本上，并且随便建个Cube也关联上这Material。
+<br>然后关联到我们的脚本上，并且随便建个Cube也关联上这Material。
 
 接着我们可以将Unity中的**RenderTexture**赋值到CS中的RWTexture2D上，但是需要注意因为我们是多线程处理像素，并且这个处理过程是**无序**的，因此我们要将RenderTexture的**enableRandomWrite**属性设置为true，代码如下：
 ```C#
@@ -257,7 +257,7 @@ computeShader.Dispatch(kernelIndex, 256 / 8, 256 / 8, 1);
 ```
 为什么是256/8，前面已经解释过了。来看看效果：
 <br>![image](https://github.com/ThereAreBearsComing/aBookOFtechArt/assets/74708198/c3aac115-7e7b-4a64-93aa-c381718b7279)
-上图就是我们Unity默认生成的CS代码所能带来的效果，我们也可试下用它处理2048 * 2048的Texture，也是非常快的。
+<br>上图就是我们Unity默认生成的CS代码所能带来的效果，我们也可试下用它处理2048 * 2048的Texture，也是非常快的。
 
 ## Example
 接下来我们再来看看粒子效果的例子：
