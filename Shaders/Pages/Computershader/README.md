@@ -81,21 +81,21 @@ RWTexture2D中，RW其实是**Read**和**Write**的意思，Texture2D就是二�
 ```C#
 numthreads(tX, tY, tZ)
 ```
-* **注：**X，Y，Z前加个t方便和后续线程组的X，Y，Z进行区分。
+* **注：** X，Y，Z前加个t方便和后续线程组的X，Y，Z进行区分。
 
-其中 tX x tY x tZ 的值即线程的总数量，例如 numthreads(4, 4, 1) 和 numthreads(16, 1, 1) 都代表着有16个线程。那么为什么不直接使用 numthreads(num) 这种形式定义，而非要分成tX，tY，tZ这种三维的形式呢？看到后面自然就懂其中的奥秘了。
+其中 tX · tY · tZ 的值即线程的总数量，例如 numthreads(4, 4, 1) 和 numthreads(16, 1, 1) 都代表着有16个线程。那么为什么不直接使用 numthreads(num) 这种形式定义，而非要分成tX，tY，tZ这种三维的形式呢？看到后面自然就懂其中的奥秘了。
 
 **每个核函数前面我们都需要定义numthreads**，否则编译会报错。
 
 其中tX，tY，tZ三个值也并不是也可随便乱填的，比如来一刀 tX=99999 暴击一下，这是不行的。它们在不同的版本里有如下的约束：
-| Compute Shader 版本 | tZ的最大取值 | 最大线程数量（tX x tY x tZ） |
+| Compute Shader 版本 | tZ的最大取值 | 最大线程数量（tX · tY · tZ） |
 | :---- | :---- | :----- |
 | cs_4_x | 1 | 768 |
 | cs_5_0 | 64 | 1024 |
 
 如果是NVIDIA的显卡，线程组中的线程又会被划分成一个个**Warp**，每个Warp由32个线程组成，一个Warp通过SM来调度。在SIMD32下，当SM操控一个Warp执行一个指令，意味着有32个线程同时执行相同的指令。假如我们使用numthreads设置每个线程组只有10个线程，但是由于SM每次调度一个Warp就会执行32个线程，这就会造成有22个线程是不干活的（静默状态），从而在性能上无法达到最优。因此针对NVIDIA的显卡，我们应该将线程组中的线程数设置为32的倍数来达到最佳性能。如果是AMD显卡的话，线程组中的线程则是被划分成一个个由64个线程组成**Wavefront**，那么线程组中的线程数应该设置为64的倍数。因此**建议numthreads值设为64的倍数**，这样可以同时顾及到两大主流的显卡。
 
-在Direct3D12中，可以通过**ID3D12GraphicsCommandList::Dispatch(gX,gY,gZ)**方法创建gX x gY x gZ个**线程组**。**注意顺序，先numthreads定义好每个核函数对应线程组里线程的数量（tX x tY x  tZ），再用Dispatch定义用多少线程组(gX x gY x gZ)来处理这个核函数**。
+在Direct3D12中，可以通过**ID3D12GraphicsCommandList::Dispatch(gX,gY,gZ)**方法创建gX · gY · gZ个**线程组**。**注意顺序，先numthreads定义好每个核函数对应线程组里线程的数量（tX · tY ·  tZ），再用Dispatch定义用多少线程组(gX · gY · gZ)来处理这个核函数**。
 
 gX，gY，gZ在不同的版本里有如下的约束：
 | Compute Shader 版本 | gX和gY的最大取值 | gZ的最大取值 |
@@ -113,8 +113,8 @@ gX，gY，gZ在不同的版本里有如下的约束：
 | :---- | :---- | :----- | :----- |
 | SV_GroupID | int3 | 当前线程所在的线程组的ID，取值范围为(0,0,0)到(gX - 1,gY - 1,gZ - 1) | 无 |
 | SV_GroupThreadID | int3 | 当前线程在所在线程组内的ID，取值范围为(0,0,0)到(tX - 1,tY - 1,tZ - 1) | 无 |
-| SV_DispatchThreadID | int3 | 当前线程在所有线程组中的所有线程里的ID，取值范围为(0,0,0)到(gX x tX - 1, gY x tY - 1, gZ x tZ - 1) | 假设该线程的SV_GroupID = (a, b, c)，SV_GroupThreadID = (i, j, k) 那么SV_DispatchThreadID = (a x tX + i, b x tY + j, c x tZ + k) |
-| SV_GroupIndex | int | 当前线程在所在线程组内的下标，取值范围为0到tX x tY x tZ - 1 | 假设该线程的SV_GroupThreadID = (i, j, k) 那么SV_GroupIndex=k x tX x tY + j x tX + i | 
+| SV_DispatchThreadID | int3 | 当前线程在所有线程组中的所有线程里的ID，取值范围为(0,0,0)到(gX · tX - 1, gY · tY - 1, gZ · tZ - 1) | 假设该线程的SV_GroupID = (a, b, c)，SV_GroupThreadID = (i, j, k) 那么SV_DispatchThreadID = (a · tX + i, b · tY + j, c · tZ + k) |
+| SV_GroupIndex | int | 当前线程在所在线程组内的下标，取值范围为0到tX · tY · tZ - 1 | 假设该线程的SV_GroupThreadID = (i, j, k) 那么SV_GroupIndex=k · tX · tY + j · tX + i | 
 
 这里需要注意的是，不管是group还是thread，它们的**顺序都是先X再Y最后Z**，用表格的理解就是先行(X)再列(Y)然后下一个表(Z)，例如我们tX=5，tY=6那么第1个thread的SV_GroupThreadID=(0,0,0)，第2个的SV_GroupThreadID=(1,0,0)，第6个的SV_GroupThreadID=(0,1,0)，第30个的SV_GroupThreadID=(4,5,0)，第31个的SV_GroupThreadID=(0,0,1)。group同理，搞清顺序后，SV_GroupIndex的计算公式就很好理解了。
 
