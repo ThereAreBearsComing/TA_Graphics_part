@@ -12,8 +12,14 @@
 ## ChatGPT
 ![image](https://github.com/ThereAreBearsComing/aBookOFtechArt/assets/74708198/f2e1c87c-4a0f-4f81-a49f-479eac007cae)
 
+### Embeddings(嵌入词)
 
 
+### LoRa(低秩适应模型)
 
 
+### Hypemetwork(超网络)
+重点用于，定义画风，艺术风格（例如不同画师的画风）。
 
+## 手部修正，错误避免
+* 局部重绘
