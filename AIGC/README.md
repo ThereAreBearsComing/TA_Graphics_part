@@ -13,7 +13,7 @@
 ![image](https://github.com/ThereAreBearsComing/aBookOFtechArt/assets/74708198/f2e1c87c-4a0f-4f81-a49f-479eac007cae)
 
 ## 文生图
-[Prompt与参数设置]()
+[Prompt与参数设置](Pages/0.1文生图.md)
 
 ### Embeddings(嵌入词)
 
