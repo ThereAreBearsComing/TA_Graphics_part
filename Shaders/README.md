@@ -35,6 +35,7 @@
    * [URP基础shader框架](Pages/URP基础shader框架.md)
    * [数据类型和关键词](Pages/0.2Shader中的基础数据类型和关键词.md)
    * [常用函数](Pages/1.00常用函数.md)
+   * [Unity中的_MainTex_ST补充](Pages/_MainTex_ST补充.md)
    * [Unity常用内置变量和函数](Pages/1.1Built-in常用内置函数.md)
    * [逻辑条件判断，及优化方法](Pages/1.5LogicalStatements.md)
    * *拓展课程：[Geometry Shader](Pages/TessellationShader(TESS)&GeometryShader(GS).md) / [Compute Shader](Pages/Computershader/)*
