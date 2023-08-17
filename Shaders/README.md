@@ -63,7 +63,7 @@
 
 * 使用shader绘制图形单元
   * [基础圆形，椭圆形，等等](Pages/)
-  * [复杂混合图形，等等](Pages/)
+  * [复杂混合图形，等等](Pages/0.91Blend.md)
   * *拓展课程：绘制3D图形单元，编写Substance Designer程序化纹理*
   * *拓展课程：运用在特效上的图形使用，Raymarching绘制图形*
  
