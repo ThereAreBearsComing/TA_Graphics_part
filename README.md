@@ -7,7 +7,7 @@ TA职位介绍
 <br>要对使用引擎十分了解，eg.当使用Ureal的可破坏网格时，就知道这个工具有很多Bug，而了解如何使用这些工具并且规避Bug，就是有用的经验。
 
 
-## [Shaders](/Shaders)
+## [Shaders 着色器](/Shaders)
 ![image](https://user-images.githubusercontent.com/74708198/200617570-ed9175d4-04b7-4d56-9f53-a54c70fcc80a.png)
 
 <br>Work with Texture Artists.
@@ -22,7 +22,7 @@ TA职位介绍
 <br>之后还有一些后处理工作，并不是写完就完了。比如色差处理，看似简单，但实际上很考验艺术眼光。
 
 
-## Effects
+## Effects 特效
 ![image](https://user-images.githubusercontent.com/74708198/200623194-a719b6e5-2a67-4536-b6c7-2f6ee1ceaa74.png)
 
 <br>Work with VFX: visual effects artists.
@@ -36,7 +36,7 @@ TA职位介绍
 <br>在举例一个河流模拟的例子。 流体模拟需要上百万的粒子。不过它们可以大量删减或至少部分地烘培到贴图里去，然后你可以做一个使用flowmap的Shader，直接使用去艺术家提供的材质去混合深水浅水，泡沫等，从而做出流水击石的泡沫效果。至于程序化的环境动画，有些动画可以作假，靠模拟即可。比如衣服被微风撩动的动画。
 
 
-## [Workflow Research & Development](/WorkflowResearch&Development)
+## [Workflow Research & Development 工作流与开发](/WorkflowResearch&Development)
 ![image](https://user-images.githubusercontent.com/74708198/200838128-d25016b2-4aa6-4cb4-92e9-66e6985af78b.png)
 
 <br>Work with Character artists, Enviro artists, Level artists.
@@ -53,7 +53,7 @@ TA职位介绍
 <br>新的游戏项目往往是简化流程的契机，去取其精华去其糟粕，从而找到新的解决方案。这里去做些改进啊，那里去开发个新的工具什么的，完善下管线或者工作流程等等。
 
 
-## [Optimization debugging](/Optimizationdebugging)
+## [Optimization debugging 优化和debug](/Optimizationdebugging)
 ![image](https://user-images.githubusercontent.com/74708198/200911246-4b82230c-e8c3-41b8-ab03-e14f9635a9f0.png)
 <br> Work with QA:quality assurance.
 * Profiliing levels
@@ -81,12 +81,13 @@ TA职位介绍
 ## Connecting artists with programmers
 ![image](https://user-images.githubusercontent.com/74708198/200928010-980b4501-0fa7-41f7-8449-b2f545c51b55.png)
 <br>Work with producers
+
 * Being a negotiator between two warring tribes
 
 <br>衔接美术和程序是一个苦力活儿，就像夹在“联盟”和你“部落”之间谈判的中立势力，如果你的团队中美术和程序关系紧张，你就得努力弥合因为两个阵营因互相缺乏了解而产生的各种分歧。因为艺术家警察觉得莫名奇妙，为啥程序执意要求把资源存为奇怪的格式，为啥非要用一些自研的工具，而不是选择现成的，而这就牵扯到了管线问题。
 
 
-## Pipline
+## Pipline 生产流程
 ![image](https://user-images.githubusercontent.com/74708198/200929512-c03ccd77-9882-43d7-9a43-205e166bf954.png)
 
 <br>Work with Pipline tool programmers
@@ -100,7 +101,7 @@ TA职位介绍
 <br>而这里的管线指的是，从模型导入游戏过程中所需要的整套工具。所以管线一开始是一个导出器，然后是一个版本控制系统，然后是服务器上的自动脚本工具，最后是引擎的导入器，这就是一个资产的管线。所以技术美术需要开发很多批量工具，需要分析现有的管线，看看哪部分是效率最低的，尤其是迭代的时候，我们经常容易忽略这一区别，，因为对于最终的模型，我们可能会有一个很长的管线，但是对于还处在测试，修改阶段的模型，管线应该越短越好，越自动越好。你可以创建工具，把模型导出而不带任何数据，同时跳过UV，法线这些要发送给引擎的数据，让引擎可以快速查看模型，还有一个核对环节，比如检查整个关卡，找到哪些模型埋在地下，或者处于盲区玩家永远不会看到的，这也将是一个很实用的批量工具。还有碰撞设置，引擎可能需要设置碰撞，否则模型就会黏在地上，但要设置正确的碰撞需要花费大量时间，所以你可以再Houdini中创建一个资产模型，自带体素碰撞，然后一起导出，最后再导入引擎。这些如果都由艺术家手动核对，效率低下，要检查面数合不合适，贴图数量是否超标，实际上大部分工作都可以用工具自动化的，或者至少可以提醒艺术家哪里有问题，记得检查和修复。
 
 
-## Tools
+## Tools 工具
 ![image](https://user-images.githubusercontent.com/74708198/201120212-5b659311-8800-448d-844f-fc6f330cb279.png)
 <br>Work with tool programmers, UX Designers.
 * Plug-ins,tailored for team's or protject's unique needs
@@ -113,7 +114,7 @@ TA职位介绍
 <br>这里作者提到他之前公司工作时，曾经和开发商一起合作开发了一个隧道竞速游戏，玩家可以用很快的速度通过隧道，而不会碰到障碍物，是给任天堂3DS开发的项目，所以优化的要求非常严格，他们一开始觉得自已的工作流程十分明智，建模都是坐标对其才建的，看起来像一个很长的直隧道，然后进入Blender里绘制曲线，再去用这些曲线来做变形。一开始一切顺利，但是很快他们发现这样需要更长的轨道，这是引擎的限制，当然也是考验3DS的技术可行性的的原因，之后必须把这些隧道切割成更小的部分，我们称之为区域，各个区域由入口点链接，首位相连，当玩家看到了入口点时，区域才会被加载显示，否则不显示，这种设计非常常见，技术上简单，也降低开销。但问题在于需要手动分割区域，重命名每个区域，连接每个入口，每次曲线变化的时候都要重新来一次，比如关卡策划说需要延长区域，编辑曲线，就得增加模型，分割更多区域，所以一开始看起来很简单的东西变得十分复杂折磨人，如果开发团队将90%的时间花在上边，将搞得像免费的3D民工，所以这时开发可以自动化工具就会十分重要。团队需要自动化的解决方案，至少自动切割这些区域，自动命名以备导出，后来他们不断加入新的功能，工具也越来越完善，自动化程度也越来越高。团队也越来越依赖于自动化的流程，只会偶尔手动做些调整，他们制作的工具用到了很多Blender里现成的功能，这些功能有时候看起来更像一个宏，而非单独的软件工具，所以他们发扬了拿来主义，直接用软件提供的功能，唯一要学习的就是Python和Blender的API，但对于那是的他来讲并非很难，这就是作者的工具开发经历。
 
 
-## Animators
+## Animators 动画
 ![image](https://user-images.githubusercontent.com/74708198/201133175-ebe9c786-ebed-4882-9829-f53c05b365aa.png)
 
 <br>Work with animation and rigging tools
@@ -124,9 +125,9 @@ TA职位介绍
 
 <br>最后就是动画部分，动作部分相关的TA通常也会被成为角色TD，或者角色技美，一般则为一个单独板块，角色TA通常不用去关注其他TA的工作，比如写Shader，特效，管线和调试等，只用去关注动作绑定，给动作绑定写脚本，控制骨骼运动，把K动作的工作自动化，又或者，做程序化动画，例如用程序化方法生产鱼群，鸟群的动作，而不是一个个手动K出来，为主要的动作控制提供自动化的解决方案，布料模拟现在也是游戏开发的大头，要想做好布料模拟，则需要熟悉技术细节，正确的准备模型，而这就计算依赖你的系统经验了。
 
-## [Artificial Intelligence](/AIGC)
+## [Artificial Intelligence AI生成](/AIGC)
 
-## Procedural generation
+## Procedural generation 程序化生成
 
 ## Overview
 学好性能测试，学好优化，掌握好各种工具的知识，还要学好Python，强烈建议Python。如果感兴趣，还可以学习一下工具开发，因为如果有虚幻引擎的基础，学习着色器也很容易。这样一来，你既知道了工作原理，还知道如何优化，而且精通Python，那么大大降低找工作难度。
