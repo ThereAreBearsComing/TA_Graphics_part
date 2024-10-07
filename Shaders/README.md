@@ -17,7 +17,7 @@
   * `法线变化`
   * [MVP矩阵详解](Pages/1.02MVP矩阵.md)
   * [Clip Space & NDC Space，透视除法](Pages/1.03容易混淆的ClipSpacevsNDC透视除法.md)
- 
+
 * [模型与材质基础](Pages/0.31模型与材质基础.md)
   * [纹理介绍](Pages/0.32纹理介绍.md)
   * [Bump Map 凹凸映射](Pages/0.33BumpMap凹凸映射.md)
@@ -46,27 +46,23 @@
   * 高光
   * [漫反射](Pages/0.5LambertModule.md)
   * 环境光
-
 * [光照模型](Pages/0.7常见多边形着色算法(Unity平行光点光源自适应函数).md)
   * Gouraud shading
   * Flat shading
   * Phong
   * [线性插值](Pages/1.0.1Lerp.md)
-
 * [切线空间](Pages/0.6法线贴图和切线空间.md)
   * `TBN矩阵构建`
   * `切线空间 / 其他空间（世界空间）互转`
-
 * [Cubemap](Pages/0.8CubeMap(反射贴图).md)
   * 如何实现反射
   * 如何实现折射
-
 * 使用shader绘制图形单元
   * [基础圆形，椭圆形，等等](Pages/)
   * [复杂混合图形，等等](Pages/0.91Blend.md)
   * *拓展课程：绘制3D图形单元，编写Substance Designer程序化纹理*
   * *拓展课程：运用在特效上的图形使用，Raymarching绘制图形*
- 
+
 ## 中级知识
 * [`PBR，基于物理的渲染`](Pages/1.6PBR简介.md)
   * 漫反射和反射
@@ -98,7 +94,7 @@
   * `渲染引擎排序的常用方法`
   * `混合图层`
   
-* [`Stencil Buffer`](Pages/2.3StencilBuffer.md)
+* [`Stencil Buffer 模板缓冲`](Pages/2.3StencilBuffer.md)
 
 * [剔除与深度测试](Pages/2.4Culling&Z)
 
@@ -139,21 +135,21 @@
 
 ## 渲染方案
 * [装液体的容器](Pages/)
-  * 考点：透明物体渲染排序
-  * 考点：剔除和深度
+  * 透明物体渲染排序
+  * 剔除和深度
 
 * [挂满水滴的玻璃](Pages/)
-  * 考点：使用shader绘制图形单元的综合应用
-  * 考点：屏幕特效
+  * 使用shader绘制图形单元的综合应用
+  * 屏幕特效
 
 * [模拟海洋平面](Pages/)
-  * 考点：使用深度贴图融合海平面上和下的场景
-  * 考点：正弦波驱动顶点动画
-  * 考点：海水的渲染
+  * 使用深度贴图融合海平面上和下的场景
+  * 正弦波驱动顶点动画
+  * 海水的渲染
 
 * [云层产生的阴影](Pages/)
-  * 考点：场景的3维坐标重建在摄像机裁剪面上
-  * 考点：UV动画
+  * 场景的3维坐标重建在摄像机裁剪面上
+  * UV动画
   
 * 草地shader的实现
   * Geometry Shader
@@ -197,5 +193,4 @@
   * 学习OpenGL或者DX，了解图形API
   * 图形算法
   * 数学，物理知识
-
 
